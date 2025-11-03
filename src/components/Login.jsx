@@ -17,7 +17,7 @@ export const Login = ({onLogin}) => {
     <input type="text" name='username' value={form.username}  onChange={handleChange}/>
     <label htmlFor="password"> Password </label>
     <input type="password" name='password' value={form.password}  onChange={handleChange}/>
-    <button type="submit" o> Submit </button>
+    <button type="submit" > Submit </button>
     </form>
     </>
   )

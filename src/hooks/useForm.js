@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export const useForm = (initialValue) => {
+  const navigate = useNavigate
   const [form, setForm] = useState(initialValue)
   const {username} = form
 
@@ -12,19 +14,16 @@ export const useForm = (initialValue) => {
   }
 
   const handleReset = () => {
-    setForm({form: initialValue})
+    setForm(initialValue)
   }
 
    const handleSubmit = (event, onLogin) => {
     handleReset()
     event.preventDefault()
-    if(username.toLowerCase() === "facu" || username.toLowerCase() === "facundo" || username.toLowerCase() === "facu" || username.toLowerCase() === "harty") {
-      return onLogin(username + " gay")
-    }
     onLogin(username)
+    localStorage.setItem("isLogged", "true")
+    navigate("/1")
   }
-
-
 
 
 

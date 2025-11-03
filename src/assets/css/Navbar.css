@@ -1,0 +1,28 @@
+#navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 1rem;
+  background-color: #84868b;
+  border-bottom: 2px solid #61dafb;
+}
+
+#navbar li {
+  display: inline;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#navbar a:hover {
+  color: #61dafb;
+  transform: scale(1.05);
+}

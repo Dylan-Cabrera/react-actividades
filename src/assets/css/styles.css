@@ -1,0 +1,91 @@
+#personajes {
+  text-align: center;
+  background-color: #fff8dc; /* Amarillo claro */
+  border: 3px solid #ffcc00;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+#personajes h1 {
+  color: #ffcc00;
+  text-shadow: 2px 2px 0 #000;
+  margin-bottom: 10px;
+}
+
+#personajes h2 {
+  color: #0066cc;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+#personajes h3 {
+  color: #222;
+  margin: 15px 0 8px 0;
+  font-size: 1.2rem;
+}
+
+#personajes p {
+  background-color: #fff;
+  border: 1px solid #ffcc00;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 0 auto 20px;
+  max-width: 500px;
+  line-height: 1.4;
+  color: #333;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+#personajes img {
+  width: 220px;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #ffcc00;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+  background-color: #fff;
+}
+
+#personajes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 20px;
+  max-width: 400px;
+}
+
+#personajes ul li {
+  background-color: #fff;
+  border: 1px solid #ffcc00;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px 0;
+  font-style: italic;
+}
+
+#personajes button {
+  background-color: #ffcc00;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 25px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#personajes button:hover:not(:disabled) {
+  background-color: #ffd633;
+  transform: scale(1.05);
+}
+
+#personajes button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}

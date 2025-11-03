@@ -3,7 +3,7 @@ import { useForm } from '../hooks/useForm'
 
 export const Login = ({onLogin}) => {
   const initialForm = {
-    email: "",
+    username: "",
     password: ""
   }
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from '../hooks/useForm'
 
 
+
 export const Register = () => {
   const initialForm = {
     username: "",
@@ -15,7 +16,7 @@ export const Register = () => {
 
 
   return (
-    <form onSubmit={(event) => handleSubmit(event)}>
+    <form onSubmit={(event) => handleSubmit(event, null)}>
     <label htmlFor="username"> Username </label>
     <input type="text" name='username' value={form.username}  onChange={handleChange}/>
     <label htmlFor="email"> Email </label>
@@ -26,7 +27,7 @@ export const Register = () => {
     <input type="text" name='firstname' value={form.firstname}  onChange={handleChange}/>
     <label htmlFor="lastname"> Lastname </label>
     <input type="text" name='lastname' value={form.lastname}  onChange={handleChange}/>
-    <button type="submit"> Submit </button>
+    <button > Submit </button>
     </form>
   )
 }

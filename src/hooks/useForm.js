@@ -20,9 +20,11 @@ export const useForm = (initialValue) => {
    const handleSubmit = (event, onLogin) => {
     handleReset()
     event.preventDefault()
-    onLogin(username)
-    localStorage.setItem("isLogged", "true")
-    navigate("/1")
+    console.log(form)
+    if(onLogin != null) {
+
+      onLogin(username)
+    }
   }
 
 

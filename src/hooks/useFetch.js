@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 
-export const useFetch = (url) => {
+export const useFetch = (endpoint) => {
     const [fetchData, setFetchData] = useState({
         data: null,
         isLoading: true
@@ -14,14 +14,14 @@ export const useFetch = (url) => {
                     isLoading: true //para que vuelva a ser true al comienzo de cada iteracion
                 });
     
-                const response = await fetch(url);
+                const response = await fetch(`https://thesimpsonsapi.com/api/characters/${endpoint}`);
                 const newData = await response.json();
-                console.log(newData)
                 
                 setFetchData({
                     data: newData,
                     isLoading: false
                 })
+                console.log(newData)
             } catch (error) {
                 console.log(error)
             }
@@ -32,7 +32,7 @@ export const useFetch = (url) => {
             return () => {
              console.log(".");
             };
-        }, [url]);
+        }, [endpoint]);
 
   return {fetchData, getFetch}
 }

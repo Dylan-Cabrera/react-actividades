@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom"
+import "../assets/css/Navbar.css"
 
 export const Navbar = () => {
   return (
     <>
-    <ul>
+    <ul id="navbar">
         <li>
-            <Link to="/" > Acividad 1 </Link>
+            <Link to="/firstapp" > Acividad 1 </Link>
         </li>
         <li>
-            <Link to="/2" > Acividad 2 </Link>
+            <Link to="/form" > Acividad 2 </Link>
         </li>
         <li>
-            <Link to="/3" > Acividad 3 </Link>
+            <Link to="/api" > Acividad 3 </Link>
         </li>
     </ul>
     </>

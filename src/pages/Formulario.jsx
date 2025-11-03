@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Login } from "../components/Login";
 import {Register} from "../components/Register"
 import { Navbar } from "../components/Navbar";
+import "../assets/css/form.css";
 
 export const Formulario = () => {
   const [user, setUser] = useState("")
@@ -12,13 +13,17 @@ export const Formulario = () => {
   return ( 
     <>
       <Navbar/>
-      <h1>¡Hola de nuevo {user}!</h1>
+      {user ? <h1>¡Hola de nuevo {user}! </h1> : <h1>¡Hola de nuevo! </h1>}
+      
+      <div id="forms">
+
       <Login onLogin={handleLogin}/>
       <br />
       <br />
       <Register/>
+      </div>
       <br />
-      <button onClick={() => {handleLogin("")}}> Logout </button>
+      <button className="logout" onClick={() => {handleLogin("")}}> Logout </button>
     </>
   );
 }

@@ -1,25 +1,34 @@
 import { useState } from "react";
-import { Login } from "../components/Login";
-import { Register } from "../components/Register";
-import { useForm } from "../hooks/useForm";
+import {LosSimpsons } from "./LosSimpsons";
+import {BrowserRouter, Route, Routes} from "react-router-dom"
 
 
 function App() {
   const [user, setUser] = useState("")
-  const handleLogin = (usename) => {
-    setUser(usename)
+  const handleLogin = (username) => {
+    setUser(username)
   }
   
   return (
-    <>
-      <h1>¡Hola de nuevo {user}!</h1>
-      <Login onLogin={handleLogin}/>
-      <br />
-      <br />
-      <Register/>
-      <br />
-      <button onClick={() => {user= username}}> Logout </button>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route/>
+        <Route path="/tarea3" element={LosSimpsons}/>
+        <Route/>
+      </Routes>
+    </BrowserRouter>
+
+    //HAY QUE MOVER TODO ESTO 
+    // <>
+    //   <h1>¡Hola de nuevo {user}!</h1>
+    //   <Login onLogin={handleLogin}/>
+    //   <br />
+    //   <br />
+    //   <Register/>
+    //   <br />
+    //   <button onClick={() => {handleLogin("")}}> Logout </button>
+    // </>
+    //ApiHooks()
   );
 }
 

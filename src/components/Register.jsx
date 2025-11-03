@@ -11,7 +11,7 @@ export const Register = () => {
     lastname: ""
   }
 
-  const [name, form, handleChange, handleReset] = useForm(initialForm)
+  const [ form, handleChange, handleSubmit] = useForm(initialForm)
 
 
   return (

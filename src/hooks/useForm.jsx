@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 export const useForm = (initialValue) => {
   const [form, setForm] = useState(initialValue)
+  const {username} = form
 
   const handleChange = (event) => {
     const {name, value} = event.target
@@ -14,10 +15,18 @@ export const useForm = (initialValue) => {
     setForm({form: initialValue})
   }
 
-  const name = () =>{
-    const username = form.username
-    return [username]
+   const handleSubmit = (event, onLogin) => {
+    handleReset()
+    event.preventDefault()
+    if(username.toLowerCase() === "facu" || username.toLowerCase() === "facundo" || username.toLowerCase() === "facu" || username.toLowerCase() === "harty") {
+      return onLogin(username + " gay")
+    }
+    onLogin(username)
   }
 
-  return [name,form, handleChange, handleReset]
+
+
+
+
+  return [form, handleChange, handleSubmit]
 }

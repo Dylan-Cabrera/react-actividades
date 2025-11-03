@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Login } from "../components/Login";
 import {Register} from "../components/Register"
-import { Navbar } from "../components/Navbar";
+import { NavBar } from "../components/NavBar";
 import "../assets/css/form.css";
 
 export const Formulario = () => {
@@ -12,7 +12,7 @@ export const Formulario = () => {
   
   return ( 
     <>
-      <Navbar/>
+      <NavBar/>
       {user ? <h1>¡Hola de nuevo {user}! </h1> : <h1>¡Hola de nuevo! </h1>}
       
       <div id="forms">

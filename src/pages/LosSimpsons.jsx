@@ -1,12 +1,12 @@
 import { CharacterInfo } from '../components/CharacterInfo'
-import { Navbar } from "../components/Navbar"
+import { NavBar } from "../components/NavBar"
 
 const api = "https://thesimpsonsapi.com/api/characters/"
 
 export const LosSimpsons = () => {
   return (
     <>
-        <Navbar/>
+        <NavBar/>
         <CharacterInfo/>
      </>
   )

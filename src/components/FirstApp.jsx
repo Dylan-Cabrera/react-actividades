@@ -1,10 +1,10 @@
-import React from 'react'
-import { Navbar } from './Navbar'
+import { NavBar } from "./NavBar"
+
 
 export const FirstApp = () => {
   return (
     <>
-    <Navbar/>
+    <NavBar/>
     <h1>Hola desde el FirstApp</h1>
     </>
   )

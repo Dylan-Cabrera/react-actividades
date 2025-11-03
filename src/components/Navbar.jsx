@@ -1,20 +1,14 @@
-import { Link } from "react-router-dom"
-import "../assets/css/Navbar.css"
+import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+export const NavBar = () => {
   return (
-    <>
-    <ul id="navbar">
+    <ul>
         <li>
-            <Link to="/firstapp" > Acividad 1 </Link>
-        </li>
-        <li>
-            <Link to="/form" > Acividad 2 </Link>
-        </li>
-        <li>
-            <Link to="/api" > Acividad 3 </Link>
+            <Link to="/"> Inicio </Link>
+            <Link to="/tarea1"> Tarea 1 </Link>
+            <Link to="/tarea2"> Tarea 2 </Link>
+            <Link to="/tarea3"> Tarea 3 </Link>
         </li>
     </ul>
-    </>
   )
 }

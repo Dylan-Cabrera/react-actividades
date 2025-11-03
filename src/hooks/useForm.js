@@ -11,13 +11,18 @@ export const useForm = (initialValue) => {
   }
 
   const handleReset = () => {
-    setForm({form: initialValue})
+    setForm(initialValue)
   }
 
-  const name = () =>{
-    const username = form.username
-    return [username]
-  }
+   const handleSubmit = (event, onLogin) => {
+    event.preventDefault();
+    onLogin()
+    handleReset();
+  };
 
-  return [name,form, handleChange, handleReset]
+
+ 
+
+
+  return [form, handleChange, handleSubmit]
 }

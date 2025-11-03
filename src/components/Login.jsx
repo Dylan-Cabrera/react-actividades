@@ -1,21 +1,22 @@
 import React from 'react'
 import { useForm } from '../hooks/useForm'
 
-export const Login = () => {
-  const initialForm = {
-    email: "",
+export const Login = ({onLogin}) => {
+  
+  const [form, handleChange, handleSubmit] = useForm({
+    username: "",
     password: ""
-  }
+  })
 
-  const [name, form, handleChange, handleReset] = useForm(initialForm)
+  const {username, password} = form
 
   return (
-    <>
-    <label htmlFor="email"> Email </label>
-    <input type="text" name='email' value={form.email}  onChange={handleChange}/>
+    <form onSubmit={(event) => handleSubmit(event, onLogin)}>
+    <label htmlFor="username"> username </label>
+    <input type="text" name='username' value={username}  onChange={handleChange}/>
     <label htmlFor="password"> Password </label>
-    <input type="password" name='password' value={form.password}  onChange={handleChange}/>
-    <button type="submit" onClick={() => {con}}> Submit </button>
-    </>
+    <input type="password" name='password' value={password}  onChange={handleChange}/>
+    <button type="submit"> Submit </button>
+    </form>
   )
 }

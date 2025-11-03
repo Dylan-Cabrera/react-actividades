@@ -7,15 +7,15 @@ export const Register = () => {
     username: "",
     email: "",
     password: "",
-    fistname: "",
+    firstname: "",
     lastname: ""
   }
 
-  const [name, form, handleChange, handleReset] = useForm(initialForm)
+  const [ form, handleChange, handleSubmit] = useForm(initialForm)
 
 
   return (
-    <>
+    <form onSubmit={(event) => handleSubmit(event)}>
     <label htmlFor="username"> Username </label>
     <input type="text" name='username' value={form.username}  onChange={handleChange}/>
     <label htmlFor="email"> Email </label>
@@ -26,7 +26,7 @@ export const Register = () => {
     <input type="text" name='firstname' value={form.firstname}  onChange={handleChange}/>
     <label htmlFor="lastname"> Lastname </label>
     <input type="text" name='lastname' value={form.lastname}  onChange={handleChange}/>
-    <button type="reset" onClick={() => {console.log(form), handleReset()}} > Submit </button>
-    </>
+    <button type="submit"> Submit </button>
+    </form>
   )
 }
